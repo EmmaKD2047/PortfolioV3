@@ -1,0 +1,49 @@
+<section class="page-hero">
+  <div class="container">
+    <p class="section-label">Services</p>
+    <h1>What I Can Help You With?</h1>
+    <p class="hero-sub">
+      I work with startups and product teams to build fast, beautiful, scalable
+      frontend applications.
+    </p>
+  </div>
+</section>
+
+<section class="services-section">
+  <div class="container">
+    <div class="services-grid">
+      @for (svc of services; track svc.title) {
+        <div class="service-card">
+          <div class="svc-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="var(--accent)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="3" />
+              <path d="M9 9h6M9 12h6M9 15h3" />
+            </svg>
+          </div>
+          <h3>{{ svc.title }}</h3>
+          <p>{{ svc.desc }}</p>
+          <a routerLink="/contact" class="svc-link">Learn more →</a>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="services-cta">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Ready to build something great?</h2>
+      <p>Let's talk about your project and figure out how I can help.</p>
+      <a routerLink="/contact" class="btn btn-primary">Get in Touch →</a>
+    </div>
+  </div>
+</section>

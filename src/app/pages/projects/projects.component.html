@@ -1,0 +1,20 @@
+<section class="page-hero">
+  <div class="container">
+    <p class="section-label">Portfolio</p>
+    <h1>All Projects</h1>
+    <p class="hero-sub">
+      A collection of work I've built — from design systems to full-stack
+      applications.
+    </p>
+  </div>
+</section>
+
+<section class="projects-section">
+  <div class="container">
+    <div class="projects-grid">
+      @for (project of projects; track project.id) {
+        <app-project-card [project]="project" />
+      }
+    </div>
+  </div>
+</section>

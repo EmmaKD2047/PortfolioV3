@@ -1,0 +1,250 @@
+@if (project) {
+  <!-- Back link -->
+  <div class="back-bar">
+    <div class="container">
+      <a routerLink="/projects" class="back-link">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M19 12H5M12 5l-7 7 7 7" />
+        </svg>
+        Back to Projects
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="detail-hero">
+    <div class="container detail-hero-inner">
+      <div class="detail-info fade-up">
+        @if (project.label) {
+          <p class="section-label">{{ project.label }}</p>
+        }
+        <h1>{{ project.title }}</h1>
+        <p class="detail-desc">{{ project.description }}</p>
+
+        <div class="tech-badges">
+          @if (project.builtWithGlobusOne) {
+            <span class="tech-badge tech-badge-globus">Globus One</span>
+          }
+          @for (tech of project.techStack || project.tags; track tech) {
+            <span class="tech-badge">{{ tech }}</span>
+          }
+        </div>
+
+        <div class="detail-actions">
+          @if (project.liveUrl) {
+            <a
+              [href]="project.liveUrl"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary"
+            >
+              View Live Demo →
+            </a>
+          }
+          @if (project.figmaUrl) {
+            <a
+              [href]="project.figmaUrl"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary"
+            >
+              View Figma Design →
+            </a>
+          }
+          @if (project.githubUrl) {
+            <a
+              [href]="project.githubUrl"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-outline"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+              View on GitHub
+            </a>
+          }
+        </div>
+      </div>
+
+      <div class="detail-preview fade-up">
+        <img
+          [src]="project.image"
+          [alt]="project.title + ' preview'"
+          class="preview-img"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenge / What I Built / Outcome -->
+  <section class="detail-pillars">
+    <div class="container pillars-grid">
+      @if (project.challenge) {
+        <div class="pillar">
+          <div class="pillar-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="var(--accent)"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4m0 4h.01" />
+            </svg>
+          </div>
+          <h3>The Challenge</h3>
+          <p>{{ project.challenge }}</p>
+        </div>
+      }
+      @if (project.features && project.features.length) {
+        <div class="pillar">
+          <div class="pillar-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="var(--accent)"
+              stroke-width="2"
+            >
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <h3>What I Built</h3>
+          <ul>
+            @for (feat of project.features; track feat) {
+              <li>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="var(--accent)"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
+                  />
+                </svg>
+                {{ feat }}
+              </li>
+            }
+          </ul>
+        </div>
+      }
+      @if (project.outcome) {
+        <div class="pillar">
+          <div class="pillar-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="var(--accent)"
+              stroke-width="2"
+            >
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+              <polyline points="16 7 22 7 22 13" />
+            </svg>
+          </div>
+          <h3>The Outcome</h3>
+          <p>{{ project.outcome }}</p>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  @if (project.screenshots && project.screenshots.length) {
+    <section class="screenshots-section">
+      <div class="container">
+        <h2 class="screenshots-title">Screenshots</h2>
+        <div class="screenshots-grid">
+          @for (shot of project.screenshots; track shot; let i = $index) {
+            <div
+              class="screenshot-item"
+              [class.active]="activeScreenshot === i"
+              (click)="setScreenshot(i)"
+            >
+              <img
+                [src]="shot"
+                [alt]="project.title + ' screenshot ' + (i + 1)"
+                loading="lazy"
+              />
+            </div>
+          }
+        </div>
+        <div class="screenshot-dots">
+          @for (shot of project.screenshots; track shot; let i = $index) {
+            <button
+              class="dot"
+              [class.active]="activeScreenshot === i"
+              (click)="setScreenshot(i)"
+              [attr.aria-label]="'Screenshot ' + (i + 1)"
+            ></button>
+          }
+        </div>
+      </div>
+    </section>
+  }
+
+  <!-- CTA -->
+  <section class="detail-cta">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-icon">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="var(--accent)"
+            stroke-width="2"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 14.09 15.91l1.27-.8a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2.01z"
+            />
+          </svg>
+        </div>
+        <div>
+          <h3>Need something similar?</h3>
+          <p>
+            I help startups and teams build scalable frontend interfaces and
+            design systems.
+          </p>
+        </div>
+        <a routerLink="/contact" class="btn btn-primary">
+          Let's Work Together →
+        </a>
+      </div>
+    </div>
+  </section>
+} @else {
+  <div class="not-found">
+    <div class="container">
+      <h2>Project not found</h2>
+      <a
+        routerLink="/projects"
+        class="btn btn-outline"
+        style="margin-top: 1.5rem"
+        >← Back to Projects</a
+      >
+    </div>
+  </div>
+}
