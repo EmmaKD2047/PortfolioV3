@@ -16,7 +16,7 @@ import emailjs from '@emailjs/browser';
  *  6. Paste the three values into the constants below
  * ─────────────────────────────────────────────────────────────────
  */
-const SERVICE_ID = 'service_8aj432r'; // e.g. 'service_abc123'
+const SERVICE_ID = 'service_yo9filw'; // e.g. 'service_abc123'
 const TEMPLATE_ID = 'template_14pbjg6'; // e.g. 'template_xyz789'
 const PUBLIC_KEY = 'eu-6bM5owtMqAM1SE'; // e.g. 'AbCdEfGhIjKlMnOp'
 

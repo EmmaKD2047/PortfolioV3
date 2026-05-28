@@ -51,7 +51,8 @@ export const PROJECTS: Project[] = [
     tags: ['Angular', 'TypeScript'],
     builtWithGlobusOne: true,
     image: '/projects/Globus SandBox.png',
-    featured: false,
+    label: 'FEATURED PROJECT',
+    featured: true,
     challenge:
       'The client needed a unified analytics dashboard that aggregated data from multiple sources in real time, with granular role-based access control.',
     features: [
@@ -62,9 +63,7 @@ export const PROJECTS: Project[] = [
     ],
     outcome:
       'Reduced reporting time by 60% and gave managers instant visibility into key business metrics.',
-    screenshots: [
-        '/projects/sandbox screenshot 1.png'
-    ],
+    screenshots: ['/projects/sandbox screenshot 1.png'],
   },
   {
     id: 3,
@@ -76,6 +75,7 @@ export const PROJECTS: Project[] = [
     builtWithGlobusOne: false,
     image: '/projects/traqvest.png',
     featured: true,
+    label: 'FEATURED PROJECT',
     liveUrl: '#',
     githubUrl: 'https://github.com/EmmaKD2047/traqvest',
     challenge:
@@ -89,16 +89,16 @@ export const PROJECTS: Project[] = [
     outcome:
       'A reliable platform for analyzing and making stock investment decisions',
     screenshots: [
-        '/projects/financials.png',
-        '/projects/valuation.png',
-        '/projects/comparison.png',
-        '/projects/watchlist.png',
+      '/projects/financials.png',
+      '/projects/valuation.png',
+      '/projects/comparison.png',
+      '/projects/watchlist.png',
     ],
   },
   {
     id: 4,
     slug: 'callover-automation',
-    title: 'Callover Automation',
+    title: 'CallOver Automation',
     description:
       'Application built for tellers to review customer transactions.',
     tags: ['Angular', 'RxJS'],
@@ -108,10 +108,8 @@ export const PROJECTS: Project[] = [
     challenge:
       'Building a secure, high-performance fintech application with complex transaction flows and compliance requirements.',
     features: [
-      'Real-time transaction tracking',
-      'Secure authentication with 2FA',
-      'Compliance-ready audit logs',
-      'Performance-optimized data tables',
+      'Daily transaction tracking',
+      'Weekly scheduling calendar',
     ],
     outcome:
       'Launched on schedule with zero critical bugs, passing all security audits on the first attempt.',
@@ -121,8 +119,7 @@ export const PROJECTS: Project[] = [
     id: 5,
     slug: 'corporate-internet-banking',
     title: 'Corporate Internet Banking',
-    description:
-      'Application built for carrying out corporate transactions.',
+    description: 'Application built for carrying out corporate transactions.',
     tags: ['Angular', 'RxJS'],
     builtWithGlobusOne: true,
     image: '/projects/fintech-app.png',
@@ -166,22 +163,23 @@ export const PROJECTS: Project[] = [
     slug: 'portfolio-v3',
     title: 'Portfolio V3',
     description:
-      'Comprehensive analytics platform with advanced charting and reporting tools.',
-    tags: ['Angular'],
+      'The current iteration of my portfolio — a fully custom Angular 19 SPA with dark/light mode, smooth routing, and a live contact form.',
+    tags: ['Angular', 'TypeScript', 'CSS', 'EmailJS'],
     image: '/projects/Portfolio 3 Mockup.png',
     featured: false,
     liveUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/EmmaKD2047/PortfolioV3',
     challenge:
-      'The team needed an analytics platform that could handle large datasets and render complex visualisations without compromising performance.',
+      'Building it into a production-grade Angular app with accessible, responsive components and real email delivery.',
     features: [
-      'Interactive Highcharts dashboards',
-      'Large dataset pagination & virtual scrolling',
-      'Custom report builder',
-      'Scheduled email reports',
+      'Dark/light theme with OS preference detection',
+      'Lazy-loaded routes with Angular 19',
+      'EmailJS contact form with loading & success states',
+      'Animated mobile navigation',
+      'Project detail pages with tech stack and screenshots',
     ],
     outcome:
-      'Processed 10× more data than the previous solution while maintaining sub-second render times.',
+      'A fast, maintainable portfolio that accurately reflects my frontend engineering skills.',
     screenshots: [],
   },
   {
@@ -189,22 +187,23 @@ export const PROJECTS: Project[] = [
     slug: 'portfolio-v2',
     title: 'Portfolio V2',
     description:
-      'Comprehensive analytics platform with advanced charting and reporting tools.',
-    tags: ['Figma'],
+      'A redesigned portfolio concept created entirely in Figma, focusing on improved visual hierarchy, typography, and a polished design system.',
+    tags: ['Figma', 'UI/UX Design'],
     builtWithGlobusOne: false,
     image: '/projects/Portfolio 2 Mockup.png',
     featured: false,
-    figmaUrl: 'https://www.figma.com/design/l5BXvIUcMTQD3PBbDoF0Rn/Portfolio-V3?node-id=749-857&t=DDXKZZ30VV6mBJj0-1',
+    figmaUrl:
+      'https://www.figma.com/design/l5BXvIUcMTQD3PBbDoF0Rn/Portfolio-V3?node-id=749-857&t=DDXKZZ30VV6mBJj0-1',
     challenge:
-      'The team needed an analytics platform that could handle large datasets and render complex visualisations without compromising performance.',
+      'Designing a cohesive, professional portfolio from scratch without a UI kit — all components, spacing and colour decisions made from the ground up.',
     features: [
-      'Interactive Highcharts dashboards',
-      'Large dataset pagination & virtual scrolling',
-      'Custom report builder',
-      'Scheduled email reports',
+      'High-fidelity mockups for all pages',
+      'Responsive frame layouts for desktop and mobile',
+      'Dark mode design',
+      'Reusable component library in Figma',
     ],
     outcome:
-      'Processed 10× more data than the previous solution while maintaining sub-second render times.',
+      'Established a clear visual direction that became the foundation for Portfolio V3.',
     screenshots: [],
   },
   {
@@ -212,22 +211,21 @@ export const PROJECTS: Project[] = [
     slug: 'portfolio-v1',
     title: 'Portfolio V1',
     description:
-      'Social community platform with real-time messaging and content sharing.',
+      'My first portfolio site, built with React. A simple single-page site showcasing early projects and skills.',
     tags: ['React'],
     image: '/projects/Portfolio Mockup.png',
     featured: false,
     liveUrl: 'https://emmanuelkadiri.netlify.app/',
     githubUrl: 'https://github.com/EmmaKD2047/My-React-Portfolio',
     challenge:
-      'Needed a scalable, real-time community platform that could support thousands of concurrent users with low latency.',
+      'Learning React fundamentals while building a real, deployed product for the first time.',
     features: [
-      'Real-time chat with Firebase',
-      'Content moderation tools',
-      'Push notifications',
-      'Responsive mobile-first UI',
+      'Responsive single-page layout',
+      'Project showcase section',
+      'Contact section',
+      'Smooth scroll navigation',
     ],
-    outcome:
-      'Onboarded 5,000+ users in the first month with 99.9% uptime and near-zero latency messaging.',
+    outcome: 'Successfully deployed to Netlify — my first live personal site.',
     screenshots: [],
   },
   //   {
