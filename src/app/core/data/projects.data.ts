@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
     slug: 'globus-one',
     title: 'Globus One',
     description:
-      'A scalable design system built with Angular and StencilJS to ensure consistency, reusability, and speed across multiple products.',
+      'A framework-agnostic design system built with StencilJS to ensure consistency, reusability, and speed across multiple products.',
     tags: ['StencilJS', 'TypeScript'],
     image: '/projects/Globus One.png',
     featured: true,
@@ -63,7 +63,7 @@ export const PROJECTS: Project[] = [
     ],
     outcome:
       'Reduced reporting time by 60% and gave managers instant visibility into key business metrics.',
-    screenshots: ['/projects/sandbox screenshot 1.png'],
+    screenshots: ['/projects/sandbox screenshot 1.png', '/projects/sandbox screenshot 2.jpeg'],
   },
   {
     id: 3,
@@ -81,10 +81,11 @@ export const PROJECTS: Project[] = [
     challenge:
       'Building a complex valuation system based on the financial numbers of a company/stock',
     features: [
-      'Search feature for any stock US stock',
+      'Search feature for any US stock',
       'Stock valuation (undervalued, fair or expensive)',
       'Stock comparison with other stocks in same sector',
       'Watchlist for stocks an investor is monitoring',
+      'Light and dark mode support'
     ],
     outcome:
       'A reliable platform for analyzing and making stock investment decisions',
@@ -103,17 +104,19 @@ export const PROJECTS: Project[] = [
       'Application built for tellers to review customer transactions.',
     tags: ['Angular', 'RxJS'],
     builtWithGlobusOne: true,
-    image: '/projects/fintech-app.png',
+    image: '/projects/Callover.png',
     featured: false,
     challenge:
-      'Building a secure, high-performance fintech application with complex transaction flows and compliance requirements.',
+      'Building a comprehensive review platform for daily transactions.',
     features: [
       'Daily transaction tracking',
       'Weekly scheduling calendar',
     ],
     outcome:
       'Launched on schedule with zero critical bugs, passing all security audits on the first attempt.',
-    screenshots: [],
+    screenshots: [
+      '/projects/callover screenshot 1.jpeg'
+    ],
   },
   {
     id: 5,
@@ -122,41 +125,41 @@ export const PROJECTS: Project[] = [
     description: 'Application built for carrying out corporate transactions.',
     tags: ['Angular', 'RxJS'],
     builtWithGlobusOne: true,
-    image: '/projects/fintech-app.png',
+    image: '/projects/CIB.png',
     featured: false,
     challenge:
-      'Building a secure, high-performance fintech application with complex transaction flows and compliance requirements.',
+      'Building a secure, high-performance application with complex transaction flows.',
     features: [
-      'Real-time transaction tracking',
-      'Secure authentication with 2FA',
-      'Compliance-ready audit logs',
-      'Performance-optimized data tables',
+      'Payment Module',
+      'e-Naira',
     ],
-    outcome:
-      'Launched on schedule with zero critical bugs, passing all security audits on the first attempt.',
-    screenshots: [],
+    // outcome:
+    //   'Launched on schedule with zero critical bugs, passing all security audits on the first attempt.',
+    screenshots: ['/projects/cib screenshot 1.jpeg'],
   },
   {
-    id: 3,
+    id: 6,
     slug: 'hr-solution',
     title: 'HR Solution',
     description:
       'HR application built for performing human resource tasks seamlessly.',
     tags: ['Angular', 'RxJS'],
-    builtWithGlobusOne: false,
-    image: '/projects/fintech-app.png',
+    builtWithGlobusOne: true,
+    image: '/projects/HR Solution.png',
     featured: false,
     challenge:
-      'Building a secure, high-performance fintech application with complex transaction flows and compliance requirements.',
+      'Building a reliable platform for managing staff effectively.',
     features: [
-      'Real-time transaction tracking',
-      'Secure authentication with 2FA',
-      'Compliance-ready audit logs',
-      'Performance-optimized data tables',
+      'Staff Recruitment Module',
+      'Staff Management',
+      'HMO Management',
+      'Payroll Module'
     ],
     outcome:
-      'Launched on schedule with zero critical bugs, passing all security audits on the first attempt.',
-    screenshots: [],
+      'A central platform for performing human resource from recruitment to resignation.',
+    screenshots: [
+      '/projects/hrsolution screenshot 1.jpeg'
+    ],
   },
   {
     id: 7,
