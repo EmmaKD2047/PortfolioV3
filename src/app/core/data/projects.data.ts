@@ -51,22 +51,63 @@ export const PROJECTS: Project[] = [
     tags: ['Angular', 'TypeScript'],
     builtWithGlobusOne: true,
     image: '/projects/Globus SandBox.png',
+    // liveUrl: 'https://sandbox.globusbank.com/home',
     label: 'FEATURED PROJECT',
     featured: true,
     challenge:
-      'The client needed a unified analytics dashboard that aggregated data from multiple sources in real time, with granular role-based access control.',
+      'Building a platform with a very comprehensive documentation with copyable code snippets',
     features: [
-      'Real-time data charts with D3.js',
-      'Role-based access control',
-      'Export to CSV / PDF',
-      'Configurable widget layout',
+      'Comprehensive documentation on services available',
+      'Forms for partner requests',
     ],
     outcome:
-      'Reduced reporting time by 60% and gave managers instant visibility into key business metrics.',
+      'Increased efficiency for partner engagement processes by 70%.',
     screenshots: ['/projects/sandbox screenshot 1.png', '/projects/sandbox screenshot 2.jpeg'],
   },
   {
     id: 3,
+    slug: 'globus-stock-hub',
+    title: 'Globus StockHub',
+    description: 'Payment platform for investing in Dangote IPO',
+    tags: ['Angular', 'TypeScript', 'Signal R'],
+    builtWithGlobusOne: true,
+    image: '/projects/StockHub Preview.png',
+    label: 'FEATURED PROJECT',
+    featured: false,
+    challenge:
+      'Building a web payment platform that updates payment status automatically using Signal R with a deadline of one week.',
+    features: [
+      'Virtual account creation for subscriptions and top ups',
+      'Subscription monitoring for subscribers',
+    ],
+    outcome:
+      'Increased revenue by 30%',
+    screenshots: ['/projects/stockhub screenshot 1.png', '/projects/stockhub screenshot 2.png'],
+  },
+  // {
+  //   id: 4,
+  //   slug: 'globus-cms',
+  //   title: 'Globus Website Content Management System (Globus W-CMS)',
+  //   description: 'Content management system for managing and publishing digital content efficiently.',
+  //   tags: ['Angular', 'TypeScript'],
+  //   builtWithGlobusOne: true,
+  //   image: '/projects/Globus CMS.png',
+  //   label: 'FEATURED PROJECT',
+  //   featured: true,
+  //   challenge:
+  //     'The client needed a unified analytics dashboard that aggregated data from multiple sources in real time, with granular role-based access control.',
+  //   features: [
+  //     'Real-time data charts with D3.js',
+  //     'Role-based access control',
+  //     'Export to CSV / PDF',
+  //     'Configurable widget layout',
+  //   ],
+  //   outcome:
+  //     'Reduced reporting time by 60% and gave managers instant visibility into key business metrics.',
+  //   screenshots: ['/projects/cms screenshot 1.png', '/projects/cms screenshot 2.jpeg'],
+  // },
+  {
+    id: 5,
     slug: 'traqvest',
     title: 'TraqVest',
     description:
@@ -76,7 +117,7 @@ export const PROJECTS: Project[] = [
     image: '/projects/traqvest.png',
     featured: true,
     label: 'FEATURED PROJECT',
-    liveUrl: '#',
+    // liveUrl: '#',
     githubUrl: 'https://github.com/EmmaKD2047/traqvest',
     challenge:
       'Building a complex valuation system based on the financial numbers of a company/stock',
@@ -97,7 +138,7 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     slug: 'callover-automation',
     title: 'CallOver Automation',
     description:
@@ -119,7 +160,7 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    id: 5,
+    id: 7,
     slug: 'corporate-internet-banking',
     title: 'Corporate Internet Banking',
     description: 'Application built for carrying out corporate transactions.',
@@ -138,7 +179,7 @@ export const PROJECTS: Project[] = [
     screenshots: ['/projects/cib screenshot 1.jpeg'],
   },
   {
-    id: 6,
+    id: 8,
     slug: 'hr-solution',
     title: 'HR Solution',
     description:
@@ -162,7 +203,7 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    id: 7,
+    id: 9,
     slug: 'portfolio-v3',
     title: 'Portfolio V3',
     description:
@@ -186,7 +227,7 @@ export const PROJECTS: Project[] = [
     screenshots: [],
   },
   {
-    id: 8,
+    id: 10,
     slug: 'portfolio-v2',
     title: 'Portfolio V2',
     description:
@@ -210,7 +251,7 @@ export const PROJECTS: Project[] = [
     screenshots: [],
   },
   {
-    id: 9,
+    id: 11,
     slug: 'portfolio-v1',
     title: 'Portfolio V1',
     description:
@@ -231,27 +272,4 @@ export const PROJECTS: Project[] = [
     outcome: 'Successfully deployed to Netlify — my first live personal site.',
     screenshots: [],
   },
-  //   {
-  //     id: 10,
-  //     slug: 'ecommerce-dashboard',
-  //     title: 'E-commerce Dashboard',
-  //     description:
-  //       'Full-featured e-commerce admin dashboard with inventory and order management.',
-  //     tags: ['Angular', 'NgRx'],
-  //     image: '/projects/ecommerce-dashboard.png',
-  //     featured: false,
-  //     liveUrl: '#',
-  //     githubUrl: '#',
-  //     challenge:
-  //       "The client's existing admin tool was slow, hard to navigate, and lacked real-time order visibility.",
-  //     features: [
-  //       'NgRx-powered state management',
-  //       'Real-time order tracking',
-  //       'Inventory management with alerts',
-  //       'Sales performance charts',
-  //     ],
-  //     outcome:
-  //       'Cut average order processing time by 40% and reduced inventory errors by 75%.',
-  //     screenshots: [],
-  //   },
 ];
